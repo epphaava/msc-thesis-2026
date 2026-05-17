@@ -34,7 +34,7 @@ Lean directory: [`../Semantics/`](../Semantics/)
 | Lean | `derLA` |
 | File | [`Semantics/Derivatives.lean`](../Semantics/Derivatives.lean) |
 
-**Lemma 3.2.1** — $\mathrm{der}_a (\mathrm{der}^{\rhd}_a L) = \empty$
+**Lemma 3.2.1** — $\mathrm{der}_a (\mathrm{der}^{\rhd}_a L) = \emptyset$
 
 | | |
 |---|---|

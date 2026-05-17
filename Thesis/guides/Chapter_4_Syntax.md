@@ -15,7 +15,7 @@ Lean directory: [`../Syntax/`](../Syntax/)
 | Lean | `Expr` |
 | File | [`Syntax/Expressions.lean`](../Syntax/Expressions.lean) |
 
-**Definition 4.1.2** — Denotational semantics $\llbracket \cdot \rrbracket$
+**Definition 4.1.2** — Denotational semantics $\llbrack \cdot \rrbrack$
 
 | | |
 |---|---|
@@ -35,7 +35,7 @@ Lean directory: [`../Syntax/`](../Syntax/)
 
 
 **Theorem 4.2.1** — Correctness of expression derivatives  
-$\llbracket D_a r \rrbracket = \mathrm{der}_a \llbracket r \rrbracket$ and $\llbracket D^{\mathrm{\rhd}}_a r \rrbracket = \mathrm{der}^{\mathrm{\rhd}}_a \llbracket r \rrbracket$
+$\llbrack D_a r \rrbrack = \mathrm{der}_a \llbrack r \rrbrack$ and $\llbrack D^{\mathrm{\rhd}}_a r \rrbrack = \mathrm{der}^{\mathrm{\rhd}}_a \llbrack r \rrbrack$
 
 | Part | Lean | File |
 |------|------|------|
@@ -74,7 +74,7 @@ $\llbracket D_a r \rrbracket = \mathrm{der}_a \llbracket r \rrbracket$ and $\llb
 
 
 **Theorem 4.2.3** — Correctness of existential derivatives  
-$\llbracket \mathrm{x}D_w r \rrbracket = \mathrm{xder}_w \llbracket r \rrbracket$
+$\llbrack \mathrm{x}D_w r \rrbrack = \mathrm{xder}_w \llbrack r \rrbrack$
 
 | | |
 |---|---|
@@ -96,7 +96,7 @@ $\llbracket \mathrm{x}D_w r \rrbracket = \mathrm{xder}_w \llbracket r \rrbracket
 *Auxiliary operators (part of Def. 4.3.1):* `MatchSet`, `matchesOfPlus` ($\cdot_N$), `matchesOfLA` ($\rhd_N$), `matchesOfStep` ($\uparrow_N$), and corresponding helpers for $\cup,\cap,\setminus,{}^*$.
 
 **Theorem 4.3.1** — Correctness of nullability  
-$n \in N(r) \Leftrightarrow \mathrm{nullable}_n \llbracket r \rrbracket$
+$n \in N(r) \Leftrightarrow \mathrm{nullable}_n \llbrack r \rrbrack$
 
 | | |
 |---|---|

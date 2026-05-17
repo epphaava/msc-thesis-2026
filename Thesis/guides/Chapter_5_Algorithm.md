@@ -21,7 +21,7 @@
 | File | [`Algorithm.lean`](../Algorithm.lean) |
 
 **Theorem 5.1.1** — Correctness of the matching algorithm  
-\(n \in \mathrm{findAllMatches}(r,w) \Leftrightarrow \mathrm{nullable}_n \llbracket \mathrm{x}D_w r \rrbracket\) (for \(n \le |w|\))
+$n \in \mathrm{findAllMatches}(r,w) \Leftrightarrow \mathrm{nullable}_n \llbrack \mathrm{x}D_w r \rrbrack$ (for $n \le |w|$)
 
 | | |
 |---|---|
