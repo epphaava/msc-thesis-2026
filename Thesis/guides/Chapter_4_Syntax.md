@@ -15,7 +15,7 @@ Lean directory: [`../Syntax/`](../Syntax/)
 | Lean | `Expr` |
 | File | [`Syntax/Expressions.lean`](../Syntax/Expressions.lean) |
 
-**Definition 4.1.2** — Denotational semantics ⟦·⟧
+**Definition 4.1.2** — Denotational semantics
 
 | | |
 |---|---|
@@ -26,24 +26,21 @@ Lean directory: [`../Syntax/`](../Syntax/)
 
 ## 4.2 Expression derivatives
 
-**Definition 4.2.1** — Expression derivatives $D_a$, $D^{\mathrm{\rhd}}_a$
+**Definition 4.2.1** — Expression derivatives
 
 | | |
 |---|---|
 | Lean | `D`, `DLA` (mutual) |
 | File | [`Syntax/Derivatives.lean`](../Syntax/Derivatives.lean) |
 
-
-**Theorem 4.2.1** — Correctness of expression derivatives  
-⟦$D_a$ r⟧ = $\mathrm{der}_a$ ⟦r⟧ and ⟦$D^{\mathrm{\rhd}}_a$ r⟧ = $\mathrm{der}^{\mathrm{\rhd}}_a$ ⟦r⟧
+**Theorem 4.2.1** — Correctness of expression derivatives
 
 | Part | Lean | File |
 |------|------|------|
 | Match derivative | `der_correct` | [`Syntax/DerivativeCorrectness.lean`](../Syntax/DerivativeCorrectness.lean) |
 | Lookahead derivative | `derLA_correct` | same |
 
-
-**Definition 4.2.2** — Iterated derivatives $D_w$, $D^{\mathrm{\rhd}}_w$
+**Definition 4.2.2** — Iterated derivatives
 
 | | |
 |---|---|
@@ -57,24 +54,21 @@ Lean directory: [`../Syntax/`](../Syntax/)
 | Match | `der_word_correct` | [`Syntax/DerivativeCorrectness.lean`](../Syntax/DerivativeCorrectness.lean) |
 | Lookahead | `derLA_word_correct` | same |
 
-
-**Definition 4.2.3** — Existential derivative $\mathrm{x}D_a r = D_a r + D^{\mathrm{LA}}_a r$
+**Definition 4.2.3** — Existential derivative
 
 | | |
 |---|---|
 | Lean | Inline: `(D a r) + (DLA a r)` inside `xD` |
 | File | [`Syntax/Derivatives.lean`](../Syntax/Derivatives.lean) |
 
-**Definition 4.2.4** — Iterated existential derivative \(\mathrm{x}D_w\)
+**Definition 4.2.4** — Iterated existential derivative
 
 | | |
 |---|---|
 | Lean | `xD` |
 | File | [`Syntax/Derivatives.lean`](../Syntax/Derivatives.lean) |
 
-
-**Theorem 4.2.3** — Correctness of existential derivatives  
-⟦$\mathrm{x}D_w$ r⟧ = $\mathrm{xder}_w$ ⟦r⟧
+**Theorem 4.2.3** — Correctness of existential derivatives
 
 | | |
 |---|---|
@@ -85,18 +79,16 @@ Lean directory: [`../Syntax/`](../Syntax/)
 
 ## 4.3 Expression nullability
 
-**Definition 4.3.1** — Expression nullability $\mathrm{N}(r)$
+**Definition 4.3.1** — Expression nullability
 
 | | |
 |---|---|
 | Lean | `N` |
 | File | [`Syntax/Nullability.lean`](../Syntax/Nullability.lean) |
-| Status | ✓ |
 
 *Auxiliary operators (part of Def. 4.3.1):* `MatchSet`, `matchesOfPlus` ($\cdot_N$), `matchesOfLA` ($\rhd_N$), `matchesOfStep` ($\uparrow_N$), and corresponding helpers for $\cup,\cap,\setminus,{}^*$.
 
-**Theorem 4.3.1** — Correctness of nullability  
-$n \in N(r) \Leftrightarrow \mathrm{nullable}_n$ ⟦r⟧
+**Theorem 4.3.1** — Correctness of nullability
 
 | | |
 |---|---|

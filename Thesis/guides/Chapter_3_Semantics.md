@@ -8,8 +8,7 @@ Lean directory: [`../Semantics/`](../Semantics/)
 
 ## 3.1 Languages of structured words
 
-**Definition 3.1.1** — Structured words  
-\(W = (\Sigma^+ \times \Sigma^*) \uplus (\mathbb{N} \times \Sigma^*)\).
+**Definition 3.1.1** — Structured words
 
 | | |
 |---|---|
@@ -20,36 +19,35 @@ Lean directory: [`../Semantics/`](../Semantics/)
 
 ## 3.2 Language derivatives
 
-**Definition 3.2.1** — Match derivative $\mathrm{der}_a$
+**Definition 3.2.1** — Match derivative
 
 | | |
 |---|---|
 | Lean | `der` |
 | File | [`Semantics/Derivatives.lean`](../Semantics/Derivatives.lean) |
 
-**Definition 3.2.2** — Lookahead derivative $\mathrm{der}^{\rhd}_a$
+**Definition 3.2.2** — Lookahead derivative
 
 | | |
 |---|---|
 | Lean | `derLA` |
 | File | [`Semantics/Derivatives.lean`](../Semantics/Derivatives.lean) |
 
-**Lemma 3.2.1** — $\mathrm{der}_a (\mathrm{der}^{\rhd}_a L) = \emptyset$
+**Lemma 3.2.1**
 
 | | |
 |---|---|
 | Lean | `der_derLA_empty` |
 | File | [`Semantics/Derivatives.lean`](../Semantics/Derivatives.lean) |
 
-**Definition 3.2.3** — Iterated derivatives $\mathrm{der}_w$ and  $\mathrm{der}^{\rhd}_w$
+**Definition 3.2.3** — Iterated derivatives
 
 | | |
 |---|---|
 | Lean | `der_word`, `derLA_word` |
 | File | [`Semantics/Derivatives.lean`](../Semantics/Derivatives.lean) |
-| Status | ✓ |
 
-**Definition 3.2.4** — Indexed nullability $\mathrm{nullable}_n$
+**Definition 3.2.4** — Indexed nullability
 
 | | |
 |---|---|
@@ -60,16 +58,15 @@ Lean directory: [`../Semantics/`](../Semantics/)
 
 | Part | Lean | File |
 |------|------|------|
-| (1) $(x,y) \in L \Leftrightarrow \mathrm{nullable}_{\|y\|}(\mathrm{der}^{\rhd}_y(\mathrm{der}_x L))$ | `membership_inl_iff_nullable` | [`Semantics/DerivativeAcceptance.lean`](../Semantics/DerivativeAcceptance.lean) |
-| (2) $(n,y) \in L \Leftrightarrow \mathrm{nullable}_{n+\|y\|}(\mathrm{der}^{\rhd}_y L)$ | `membership_inr_iff_nullable` | same |
+| (1) | `membership_inl_iff_nullable` | [`Semantics/DerivativeAcceptance.lean`](../Semantics/DerivativeAcceptance.lean) |
+| (2) | `membership_inr_iff_nullable` | same |
 
-**Definition 3.2.5** — Existential derivative $xder_a$
+**Definition 3.2.5** — Existential derivative
 
 | | |
 |---|---|
 | Lean | `xder` |
 | File | [`Semantics/Derivatives.lean`](../Semantics/Derivatives.lean) |
-
 
 **Theorem 3.2.2** — Existential derivative and indexed nullability
 
@@ -82,7 +79,7 @@ Lean directory: [`../Semantics/`](../Semantics/)
 
 ## 3.3 Language operators
 
-**Definition 3.3.1** — Structured concatenation $\mathrm{wc}$
+**Definition 3.3.1** — Structured concatenation
 
 | | |
 |---|---|
@@ -141,14 +138,14 @@ All match- and lookahead-derivative laws from the proposition are proved in that
 |---|---|
 | File | [`Semantics/AlgebraicLaws.lean`](../Semantics/AlgebraicLaws.lean) |
 
-**Proposition 3.5.2** — Basic properties of $\mathrm{Step}$
+**Proposition 3.5.2** — Basic properties of step
 
 | Part | Lean | File |
 |------|------|------|
 | (3.16) monotonicity | `step_motonicity` | [`Semantics/AlgebraicLaws.lean`](../Semantics/AlgebraicLaws.lean) |
 | (3.17) non-idempotence | `step_non_idempotence` | same |
 
-**Proposition 3.5.3** — Left identity $ \ \mathrm{I} \cdot L = L$
+**Proposition 3.5.3** — Left identity
 
 | | |
 |---|---|
