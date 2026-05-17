@@ -1,4 +1,4 @@
-import Thesis
+import Thesis.Examples
 
 def main : IO Unit :=
-  IO.println s!"Hello, {hello}!"
+  IO.println "Thesis formalization built successfully."
